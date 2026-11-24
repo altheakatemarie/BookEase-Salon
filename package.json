@@ -1,0 +1,12 @@
+{
+  "name": "bookease-salon-fresh",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -k \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "check:server": "node --check server/index.js"
+  },
+  "devDependencies": {"concurrently": "^9.2.1"}
+}
